@@ -4,7 +4,7 @@
 
 ##  Options:
 
-  General options             |
+  General options             |                             |
   ----------------------------|----------------------------
   `-h, --help`                | Print help message and exit
   `--version`                 | Print program version and exit
@@ -40,7 +40,7 @@
 
 Specifying files is done with a filter and/or a Python expression
 
-**Filter examples**                                               |
+**Filter examples**                                               |                                               |
 ------------------------------------------------------------------|----------------------------------------------
 **Use --range to specify limits on number of results**            |
 `--range '1-500'`                                                 | Download the first 500 results
@@ -157,7 +157,7 @@ Python expression to convert title to lower case, and replace spaces with unders
 
 `{title.lower().replace(' ', '_')}`
 
-```javascript
+```json
 
     "postprocessors": [
       {
@@ -171,7 +171,7 @@ Python expression to convert title to lower case, and replace spaces with unders
         "name": "exec",
         "final": true,
         "command": "mkdir -p {}/metadata && mv -t {}/metadata -- *.json"
-        "alternatuve command": "(if not exist {}metadata mkdir {}metadata) & (if exist {}*.json move /y {}*.json {}metadata)",
+        "alternative-command": "(if not exist {}metadata mkdir {}metadata) & (if exist {}*.json move /y {}*.json {}metadata)",
       },
       {
         "name": "exec",
